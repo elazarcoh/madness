@@ -45,6 +45,8 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-export:before { content: '\e800'; }
-.icon-home:before { content: '\e801'; }
-.icon-search:before { content: '\e802'; }
+.icon-clipboard:before { content: '\e800'; } /* '' */
+.icon-home:before { content: '\e801'; } /* '' */
+.icon-search:before { content: '\e802'; } /* '' */
+.icon-docs:before { content: '\f0c5'; } /* '' */
+.icon-clone:before { content: '\f24d'; } /* '' */

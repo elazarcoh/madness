@@ -1,81 +1,80 @@
-
-pre.highlight table td { padding: 5px; }
-pre.highlight table pre { margin: 0; }
-pre.highlight, pre.highlight .w {
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
   color: #303030;
 }
-pre.highlight .err {
+.highlight .err {
   color: #151515;
   background-color: #ac4142;
 }
-pre.highlight .c, pre.highlight .ch, pre.highlight .cd, pre.highlight .cm, pre.highlight .cpf, pre.highlight .c1, pre.highlight .cs {
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
   color: #505050;
 }
-pre.highlight .cp {
+.highlight .cp {
   color: #f4bf75;
 }
-pre.highlight .nt {
+.highlight .nt {
   color: #f4bf75;
 }
-pre.highlight .o, pre.highlight .ow {
+.highlight .o, .highlight .ow {
   color: #d0d0d0;
 }
-pre.highlight .p, pre.highlight .pi {
+.highlight .p, .highlight .pi {
   color: #d0d0d0;
 }
-pre.highlight .gi {
+.highlight .gi {
   color: #90a959;
 }
-pre.highlight .gd {
+.highlight .gd {
   color: #ac4142;
 }
-pre.highlight .gh {
+.highlight .gh {
   color: #6a9fb5;
   background-color: #151515;
   font-weight: bold;
 }
-pre.highlight .k, pre.highlight .kn, pre.highlight .kp, pre.highlight .kr, pre.highlight .kv {
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
   color: #aa759f;
 }
-pre.highlight .kc {
+.highlight .kc {
   color: #d28445;
 }
-pre.highlight .kt {
+.highlight .kt {
   color: #d28445;
 }
-pre.highlight .kd {
+.highlight .kd {
   color: #d28445;
 }
-pre.highlight .s, pre.highlight .sb, pre.highlight .sc, pre.highlight .dl, pre.highlight .sd, pre.highlight .s2, pre.highlight .sh, pre.highlight .sx, pre.highlight .s1 {
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
   color: #90a959;
 }
-pre.highlight .sa {
+.highlight .sa {
   color: #aa759f;
 }
-pre.highlight .sr {
+.highlight .sr {
   color: #75b5aa;
 }
-pre.highlight .si {
+.highlight .si {
   color: #8f5536;
 }
-pre.highlight .se {
+.highlight .se {
   color: #8f5536;
 }
-pre.highlight .nn {
+.highlight .nn {
   color: #f4bf75;
 }
-pre.highlight .nc {
+.highlight .nc {
   color: #f4bf75;
 }
-pre.highlight .no {
+.highlight .no {
   color: #f4bf75;
 }
-pre.highlight .na {
+.highlight .na {
   color: #6a9fb5;
 }
-pre.highlight .m, pre.highlight .mb, pre.highlight .mf, pre.highlight .mh, pre.highlight .mi, pre.highlight .il, pre.highlight .mo, pre.highlight .mx {
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
   color: #90a959;
 }
-pre.highlight .ss {
+.highlight .ss {
   color: #90a959;
 }

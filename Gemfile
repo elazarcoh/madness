@@ -20,6 +20,7 @@ group :development do
   gem 'sasstool'
   gem 'simplecov'
   gem 'yard'
+  gem 'rerun'
 
 end
 

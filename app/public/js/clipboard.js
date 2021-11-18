@@ -5,7 +5,7 @@ $(function() {
     }
   });
 
-  html = '<a href="#" onclick="return false" class="clipboard-button" data-clipboard-target=".code"><i class="icon-export"></i></a>';
+  html = '<a href="#" onclick="return false" class="clipboard-button" data-clipboard-target=".code"><i class="icon-clone"></i></a>';
 
-  $('.CodeRay pre').prepend(html);
+  $('.highlight').prepend(html);
 })
