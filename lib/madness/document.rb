@@ -1,5 +1,6 @@
 require 'commonmarker'
 require 'coderay'
+require 'rouge'
 
 module Madness
 
@@ -151,7 +152,17 @@ module Madness
       html.gsub(/\<code class="language-(.+?)"\>(.+?)\<\/code\>/m) do
         lang, code = $1, $2
         code = CGI.unescapeHTML code
-        CodeRay.scan(code, lang).html opts
+
+formatter = Rouge::Formatters::HTML.new(css_class: 'highlight')
+        formatter = Rouge::Formatters::HTMLInline.new(Rouge::Theme.find('base16.solarized'))
+        lexer = Rouge::Lexer.find(lang)
+        if lexer
+          '<pre class="highlight">' +
+          formatter.format(lexer.lex(code)) +
+          '</pre>'
+        else
+          "Invalid language: #{lang}"
+        end
       end
     end
 

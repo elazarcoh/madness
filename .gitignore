@@ -21,3 +21,5 @@ toc.txt
 toc.html
 
 *.sublime-*
+
+/vendor
