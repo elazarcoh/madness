@@ -122,7 +122,6 @@ code {
     content: "\00a0"; }
 
 pre {
-  margin-left: 20px;
   overflow: auto;
   line-height: 1.45;
   word-wrap: normal; }
