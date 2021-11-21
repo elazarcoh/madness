@@ -8,7 +8,7 @@ By default, the `github` theme is used. To use a different theme (one avaliable 
 bundler run theme <THEME>
 ```
 
-It'll generate `_highlight.scss` file, which you can move to [app/styles](), and then regenerate the css from it with:
+It'll generate `_highlight.scss` file, which you can move to [app/styles](app/styles), and then regenerate the css from it with:
 
 ```bash
 bundler run css
