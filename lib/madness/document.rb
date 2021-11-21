@@ -1,5 +1,6 @@
 require 'commonmarker'
 require 'coderay'
+require 'rouge'
 
 module Madness
 
@@ -149,9 +150,17 @@ module Madness
       line_numbers = config.line_numbers ? :table : nil
       opts = { css: :style, wrap: nil, line_numbers: line_numbers }
       html.gsub(/\<code class="language-(.+?)"\>(.+?)\<\/code\>/m) do
-        lang, code = $1, $2
-        code = CGI.unescapeHTML code
-        CodeRay.scan(code, lang).html opts
+        lang, code = $1, $2 
+        code = CGI.unescapeHTML code 
+        formatter = Rouge::Formatters::HTML.new
+        lexer = Rouge::Lexer.find(lang)
+        if lexer
+          '<pre class="highlight" style="position: relative;">' +
+          formatter.format(lexer.lex(code)) +
+          '</pre>'
+        else
+          "Invalid language: #{lang}"
+        end
       end
     end
 

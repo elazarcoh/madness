@@ -1,6 +1,7 @@
 require_relative 'lib/madness'
 require "sasstool"
 require "runfile-tasks"
+require "rouge"
 
 title   "Madness Runfile"
 summary "Runfile tasks for building the Madness gem"
@@ -15,6 +16,22 @@ action :css do
   target = "app/public/css"
   Sasstool::Renderer.new("app/styles/main.scss").save target
   puts "Saved #{target}"
+end
+
+usage "theme <theme>"
+help  "Generate Highlight CSS for given theme"
+action :theme do |args|
+  target = "_highlight.scss"
+  theme_name = args['<theme>']
+  theme_code = Rouge::Theme.find(theme_name).render(scope: '.highlight')
+  File.write(target, theme_code)
+  puts "Saved #{theme_name} to #{target}"
+end
+
+usage "langs"
+help  "List the supported languages for syntax highlighing"
+action :langs do
+  system 'rougify list'
 end
 
 help   "Run YARD server"

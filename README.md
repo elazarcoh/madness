@@ -1,3 +1,28 @@
+# This fork uses `rouge` instead for `coderay`
+
+Most noteable difference is that `rouge` supports many more languages syntax.
+
+By default, the `github` theme is used. To use a different theme (one avaliable in `rouge`), you can generate it with:
+
+```bash
+bundler run theme <THEME>
+```
+
+It'll generate `_highlight.scss` file, which you can move to [app/styles](app/styles), and then regenerate the css from it with:
+
+```bash
+bundler run css
+```
+
+To put it all together:
+```bash
+bundler run theme <THEME>
+mv _highlight.scss ./app/styles
+bundler run css
+```
+
+You can see avaliable themes [here](https://spsarolkar.github.io/rouge-theme-preview/).
+
 # Madness - Instant Markdown Server
 
 [![Gem Version](https://badge.fury.io/rb/madness.svg)](https://badge.fury.io/rb/madness)
