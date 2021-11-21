@@ -149,13 +149,9 @@ module Madness
     def syntax_highlight(html)
       line_numbers = config.line_numbers ? :table : nil
       opts = { css: :style, wrap: nil, line_numbers: line_numbers }
-      html.gsub(/\<code(?: class="language-(.+?)")?\>(.+?)\<\/code\>/m) do
-        lang, code = $1, $2
-        if lang.nil?
-          lang = 'plaintext'
-        end
-        code = CGI.unescapeHTML code
-
+      html.gsub(/\<code class="language-(.+?)"\>(.+?)\<\/code\>/m) do
+        lang, code = $1, $2 
+        code = CGI.unescapeHTML code 
         formatter = Rouge::Formatters::HTML.new
         lexer = Rouge::Lexer.find(lang)
         if lexer
