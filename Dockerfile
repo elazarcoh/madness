@@ -13,5 +13,7 @@ ENV BUNDLE_WITHOUT development test
 RUN bundle install
 
 RUN mkdir -p /docs
+WORKDIR /docs
 EXPOSE 3000
-ENTRYPOINT ["bundler", "exec", "madness", "/docs"]
+ENV BUNDLE_GEMFILE /usr/app/Gemfile
+ENTRYPOINT ["bundle", "exec", "madness"]
