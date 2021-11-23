@@ -110,6 +110,21 @@ dl {
 li > p {
   margin-top: 16px; }
 
+.clipboard-button {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  font-size: 1.25em;
+  opacity: 0.7;
+  transition: 0.3s; }
+
+.clipboard-button:hover {
+  transition: 0.3s;
+  opacity: .3; }
+
+.code-block {
+  padding: 16px; }
+
 code {
   padding: 0;
   padding-top: 0.2em;
@@ -145,35 +160,8 @@ pre {
     content: normal; }
 
 .highlight {
-  padding: 1.5%;
-  border-radius: 8px; }
-
-.clipboard-button {
-  float: right;
-  font-size: 1.25em;
-  opacity: 0.7;
-  transition: 0.3s; }
-
-.clipboard-button:hover {
-  transition: 0.3s;
-  opacity: .3; }
-
-table.CodeRay:hover .clipboard-button {
-  opacity: 1;
-  transition: opacity 0.3s; }
-
-table.CodeRay {
   position: relative;
-  margin-bottom: 0; }
-  table.CodeRay pre {
-    margin-bottom: 0; }
-  table.CodeRay tr, table.CodeRay td {
-    border: 0; }
-    table.CodeRay tr pre, table.CodeRay td pre {
-      margin-left: 0; }
-  table.CodeRay td.line-numbers {
-    background: #eee;
-    padding: 4px; }
+  border-radius: 6px; }
 
 .highlight table td {
   padding: 5px; }

@@ -7,5 +7,5 @@ $(function() {
 
   html = '<a href="#" onclick="return false" class="clipboard-button" data-clipboard-target=".code"><i class="icon-clone"></i></a>';
 
-  $('.highlight').prepend(html);
+  $('.code-frame').prepend(html);
 })

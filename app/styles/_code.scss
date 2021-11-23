@@ -1,3 +1,20 @@
+.clipboard-button {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  font-size: 1.25em;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.clipboard-button:hover { 
+  transition: 0.3s;
+  opacity: .3;
+}
+
+.code-block {
+  padding: 16px;
+}
+
 code {
   padding: 0;
   padding-top: 0.2em;
@@ -54,6 +71,6 @@ pre {
 }
 
 .highlight {
-	padding: 1.5%;
-	border-radius: 8px;
+  position: relative;
+	border-radius: 6px;
 }

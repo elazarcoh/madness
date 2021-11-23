@@ -1,5 +1,4 @@
 require 'commonmarker'
-require 'coderay'
 require 'rouge'
 
 module Madness
@@ -138,14 +137,11 @@ module Madness
       doc.first_child.insert_before h1
     end
 
-    # Apply syntax highlighting with CodeRay. This will parse for any
-    # <code class='LANG'> sections in the HTML, pass it to CodeRay for
+    # Apply syntax highlighting with rouge. This will parse for any
+    # <code class='LANG'> sections in the HTML, pass it to rouge for
     # highlighting.
-    # Since CodeRay adds another HTML escaping, on top of what RDiscount
-    # does, we unescape it before passing it to CodeRay.
-    #
-    # Open StackOverflow question:
-    # http://stackoverflow.com/questions/37771279/prevent-double-escaping-with-coderay-and-rdiscount
+    # Since rouge adds another HTML escaping, on top of what RDiscount
+    # does, we unescape it before passing it to rouge.
     def syntax_highlight(html)
       line_numbers = config.line_numbers ? :table : nil
       opts = { css: :style, wrap: nil, line_numbers: line_numbers }
@@ -155,9 +151,13 @@ module Madness
         formatter = Rouge::Formatters::HTML.new
         lexer = Rouge::Lexer.find(lang)
         if lexer
-          '<pre class="highlight" style="position: relative;">' +
+          '<div class="highlight">' +
+          '<pre class="code-frame">' +
+          '<div class="code-block">' +
           formatter.format(lexer.lex(code)) +
-          '</pre>'
+          '</div>' +
+          '</pre>' +
+          '</div>' 
         else
           "Invalid language: #{lang}"
         end
